@@ -63,6 +63,26 @@ namespace PrjModulo1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button1600 {
+            get {
+                object obj = ResourceManager.GetObject("button1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button60 {
+            get {
+                object obj = ResourceManager.GetObject("button60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DSCF5739 {
             get {
                 object obj = ResourceManager.GetObject("DSCF5739", resourceCulture);

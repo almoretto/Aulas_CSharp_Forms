@@ -28,46 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnButtonTwo = new System.Windows.Forms.Button();
+            this.btnButtonOne = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // btnButtonTwo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.btnButtonTwo.Location = new System.Drawing.Point(99, 141);
+            this.btnButtonTwo.Name = "btnButtonTwo";
+            this.btnButtonTwo.Size = new System.Drawing.Size(166, 61);
+            this.btnButtonTwo.TabIndex = 1;
+            this.btnButtonTwo.Text = "Botão 2";
+            this.btnButtonTwo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnButtonOne
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.btnButtonOne.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnButtonOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnButtonOne.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnButtonOne.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnButtonOne.Image = global::PrjModulo1.Properties.Resources.button60;
+            this.btnButtonOne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnButtonOne.Location = new System.Drawing.Point(97, 66);
+            this.btnButtonOne.Name = "btnButtonOne";
+            this.btnButtonOne.Size = new System.Drawing.Size(169, 60);
+            this.btnButtonOne.TabIndex = 0;
+            this.btnButtonOne.Text = "Botão";
+            this.btnButtonOne.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnButtonOne.UseVisualStyleBackColor = false;
+            this.btnButtonOne.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 571);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(381, 281);
+            this.Controls.Add(this.btnButtonTwo);
+            this.Controls.Add(this.btnButtonOne);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnButtonOne;
+        private System.Windows.Forms.Button btnButtonTwo;
     }
 }
 
