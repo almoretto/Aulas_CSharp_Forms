@@ -37,6 +37,10 @@
             this.lblNameOut = new System.Windows.Forms.Label();
             this.lblNameList = new System.Windows.Forms.Label();
             this.lstNames = new System.Windows.Forms.ListBox();
+            this.chkYes = new System.Windows.Forms.CheckBox();
+            this.chkOrdered = new System.Windows.Forms.CheckBox();
+            this.chkUnOrdered = new System.Windows.Forms.CheckBox();
+            this.btnValidate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnButtonTwo
@@ -127,7 +131,7 @@
             // lblNameList
             // 
             this.lblNameList.AutoSize = true;
-            this.lblNameList.Location = new System.Drawing.Point(35, 223);
+            this.lblNameList.Location = new System.Drawing.Point(35, 189);
             this.lblNameList.Name = "lblNameList";
             this.lblNameList.Size = new System.Drawing.Size(126, 23);
             this.lblNameList.TabIndex = 7;
@@ -139,16 +143,72 @@
             this.lstNames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lstNames.FormattingEnabled = true;
             this.lstNames.ItemHeight = 22;
-            this.lstNames.Location = new System.Drawing.Point(39, 250);
+            this.lstNames.Location = new System.Drawing.Point(39, 216);
             this.lstNames.Name = "lstNames";
             this.lstNames.Size = new System.Drawing.Size(463, 156);
             this.lstNames.TabIndex = 8;
+            this.lstNames.DoubleClick += new System.EventHandler(this.lstNames_DoubleClick);
+            // 
+            // chkYes
+            // 
+            this.chkYes.AutoSize = true;
+            this.chkYes.Checked = true;
+            this.chkYes.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkYes.Location = new System.Drawing.Point(508, 216);
+            this.chkYes.Name = "chkYes";
+            this.chkYes.Size = new System.Drawing.Size(55, 27);
+            this.chkYes.TabIndex = 9;
+            this.chkYes.Text = "Sim";
+            this.chkYes.UseVisualStyleBackColor = true;
+            this.chkYes.CheckStateChanged += new System.EventHandler(this.chkYes_CheckStateChanged);
+            // 
+            // chkOrdered
+            // 
+            this.chkOrdered.AutoSize = true;
+            this.chkOrdered.Checked = true;
+            this.chkOrdered.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkOrdered.Location = new System.Drawing.Point(508, 257);
+            this.chkOrdered.Name = "chkOrdered";
+            this.chkOrdered.Size = new System.Drawing.Size(107, 27);
+            this.chkOrdered.TabIndex = 10;
+            this.chkOrdered.Text = "Ordenado";
+            this.chkOrdered.UseVisualStyleBackColor = true;
+            this.chkOrdered.CheckStateChanged += new System.EventHandler(this.chkOrdered_CheckStateChanged);
+            // 
+            // chkUnOrdered
+            // 
+            this.chkUnOrdered.AutoSize = true;
+            this.chkUnOrdered.Location = new System.Drawing.Point(508, 298);
+            this.chkUnOrdered.Name = "chkUnOrdered";
+            this.chkUnOrdered.Size = new System.Drawing.Size(142, 27);
+            this.chkUnOrdered.TabIndex = 11;
+            this.chkUnOrdered.Text = "Não Ordenado";
+            this.chkUnOrdered.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkUnOrdered.UseVisualStyleBackColor = true;
+            // 
+            // btnValidate
+            // 
+            this.btnValidate.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnValidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValidate.Font = new System.Drawing.Font("Calibri", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidate.Location = new System.Drawing.Point(302, 72);
+            this.btnValidate.Name = "btnValidate";
+            this.btnValidate.Size = new System.Drawing.Size(110, 31);
+            this.btnValidate.TabIndex = 12;
+            this.btnValidate.Text = "Validar";
+            this.btnValidate.UseVisualStyleBackColor = false;
+            this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 586);
+            this.Controls.Add(this.btnValidate);
+            this.Controls.Add(this.chkUnOrdered);
+            this.Controls.Add(this.chkOrdered);
+            this.Controls.Add(this.chkYes);
             this.Controls.Add(this.lstNames);
             this.Controls.Add(this.lblNameList);
             this.Controls.Add(this.lblNameOut);
@@ -178,6 +238,10 @@
         private System.Windows.Forms.Label lblNameOut;
         private System.Windows.Forms.Label lblNameList;
         private System.Windows.Forms.ListBox lstNames;
+        private System.Windows.Forms.CheckBox chkYes;
+        private System.Windows.Forms.CheckBox chkOrdered;
+        private System.Windows.Forms.CheckBox chkUnOrdered;
+        private System.Windows.Forms.Button btnValidate;
     }
 }
 
