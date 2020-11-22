@@ -56,8 +56,7 @@ namespace PrjModulo1
             //Validation on key change
 
         }
-        private void txtName_KeyUp(object sender, KeyEventArgs e)
-        //The Class KeyEventArgs brings the key code pressed 
+        private void txtName_KeyUp(object sender, KeyEventArgs e)//The Class KeyEventArgs brings the key code pressed 
         {
             if (e.KeyCode == Keys.Enter) //Test if the "e" key is Enter
             {
@@ -134,6 +133,53 @@ namespace PrjModulo1
             {
                 chkUnOrdered.Checked = false;
             }
+        }
+
+        private void rbtQuestion1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtQuestion1AnsA.Checked)
+            {
+                MessageBox.Show("Wrong Answer!");
+            }
+            else if (rbtQuestion1AnsB.Checked)
+            {
+                MessageBox.Show("Wrong Answer!");
+            }
+            else if (rbtQuestion1AnsC.Checked)
+            {
+                MessageBox.Show("Correct!!");
+            }
+            else
+            {
+                MessageBox.Show("Select one Answer");
+            }
+        }
+
+        private void rbtQuestion2AnsA_CheckedChanged(object sender, EventArgs e){
+            if (rbtQuestion2AnsA.Checked && !rbtQuestion2AnsB.Checked && !rbtQuestion2AnsC.Checked){
+                MessageBox.Show("Wrong Answer!");
+            }
+            if (!rbtQuestion2AnsA.Checked && !rbtQuestion2AnsB.Checked && !rbtQuestion2AnsC.Checked){
+                MessageBox.Show("Select at least one Answer");
+            } }
+        private void rbtQuestion2AnsB_CheckedChanged(object sender, EventArgs e){  
+           if (rbtQuestion2AnsB.Checked && !rbtQuestion2AnsA.Checked && !rbtQuestion2AnsC.Checked){
+                MessageBox.Show("Wrong Answer!");
+            }
+            if (!rbtQuestion2AnsA.Checked && !rbtQuestion2AnsB.Checked && !rbtQuestion2AnsC.Checked){
+                MessageBox.Show("Select at least one Answer");
+            } }
+        private void rbtQuestion2AnsC_CheckedChanged(object sender, EventArgs e){   
+            if (rbtQuestion2AnsC.Checked && !rbtQuestion2AnsA.Checked && !rbtQuestion2AnsB.Checked){
+                MessageBox.Show("Correct!!");
+            }
+            if (!rbtQuestion2AnsA.Checked && !rbtQuestion2AnsB.Checked && !rbtQuestion2AnsC.Checked){
+                MessageBox.Show("Select at least one Answer");
+            } }
+
+        private void cmbStones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(cmbStones.SelectedItem.ToString());
         }
     }
 }
