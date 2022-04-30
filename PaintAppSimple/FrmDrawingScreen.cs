@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PaintAppSimple
 {
-	public partial class Form1 : Form
+	public partial class FrmDrawingScreen : Form
 	{
-		public Form1()
+		public FrmDrawingScreen()
 		{
 			InitializeComponent();
 		}
