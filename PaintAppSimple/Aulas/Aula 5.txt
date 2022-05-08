@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SimplePaint
+{
+    public partial class FormPrincipal : Form
+    {
+        public FormPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        // Handler do evento de click do botão
+        // É disparado quando o botão é clicado
+        // Serve para manipularmos o que acontece quando o clique ocorre
+        private void buttonCorCaneta_Click(object sender, EventArgs e)
+        {
+            var colorDialog = new ColorDialog(); // ColorDialog é uma caixa de seleção de cores
+            var corEscolhida = colorDialog.ShowDialog(); // Exibe na forma modal - aplicação fica travada enquanto o diálogo não é resolvido
+            if(corEscolhida == DialogResult.OK) // Veriica se usuário clicou mesmo em OK
+            {
+                buttonCorCaneta.BackColor = colorDialog.Color; // Alteramos a cor do botão para a cor escolhida pelo usuário
+            }
+        }
+    }
+}

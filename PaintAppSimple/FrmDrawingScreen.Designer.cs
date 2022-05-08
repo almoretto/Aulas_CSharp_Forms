@@ -72,6 +72,7 @@ namespace PaintAppSimple
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClean
             // 
@@ -83,6 +84,7 @@ namespace PaintAppSimple
             this.btnClean.TabIndex = 5;
             this.btnClean.Text = "Limpar";
             this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnEraser
             // 
@@ -94,6 +96,7 @@ namespace PaintAppSimple
             this.btnEraser.TabIndex = 4;
             this.btnEraser.Text = "Borracha";
             this.btnEraser.UseVisualStyleBackColor = false;
+            this.btnEraser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEraser_MouseDown);
             // 
             // cmbPenThickness
             // 
@@ -105,6 +108,7 @@ namespace PaintAppSimple
             this.cmbPenThickness.Name = "cmbPenThickness";
             this.cmbPenThickness.Size = new System.Drawing.Size(151, 36);
             this.cmbPenThickness.TabIndex = 3;
+            this.cmbPenThickness.SelectedIndexChanged += new System.EventHandler(this.cmbPenThickness_SelectedIndexChanged);
             // 
             // btnPenColor
             // 
@@ -115,6 +119,7 @@ namespace PaintAppSimple
             this.btnPenColor.Size = new System.Drawing.Size(36, 36);
             this.btnPenColor.TabIndex = 2;
             this.btnPenColor.UseVisualStyleBackColor = false;
+            this.btnPenColor.Click += new System.EventHandler(this.btnPenColor_Click);
             // 
             // lblPenThickness
             // 
@@ -144,6 +149,9 @@ namespace PaintAppSimple
             this.pnlDrawPad.Name = "pnlDrawPad";
             this.pnlDrawPad.Size = new System.Drawing.Size(1196, 551);
             this.pnlDrawPad.TabIndex = 1;
+            this.pnlDrawPad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseDown);
+            this.pnlDrawPad.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseMove);
+            this.pnlDrawPad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseUp);
             // 
             // FrmDrawingScreen
             // 
