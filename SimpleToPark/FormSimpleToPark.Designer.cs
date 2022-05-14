@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSimpleToPark));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -35,12 +36,12 @@
             this.btnInsertRegister = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.lblTotalValue = new System.Windows.Forms.Label();
-            this.dtgDataView = new System.Windows.Forms.DataGridView();
+            this.dtgParkingView = new System.Windows.Forms.DataGridView();
             this.lblHourValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgParkingView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,7 +70,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.lblTotalValue, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dtgDataView, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dtgParkingView, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(155, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -84,17 +85,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.lblHourValue, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnInsertRegister, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnConfig, 0, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.906882F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.09312F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.848857F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.2724F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.06662F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.812126F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(146, 589);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -112,6 +113,7 @@
             this.btnInsertRegister.TabIndex = 0;
             this.btnInsertRegister.Text = "Cadastrar";
             this.btnInsertRegister.UseVisualStyleBackColor = false;
+            this.btnInsertRegister.Click += new System.EventHandler(this.btnInsertRegister_Click);
             // 
             // btnConfig
             // 
@@ -121,9 +123,9 @@
             this.btnConfig.BackColor = System.Drawing.Color.DarkGray;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnConfig.Location = new System.Drawing.Point(3, 538);
+            this.btnConfig.Location = new System.Drawing.Point(3, 539);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(140, 48);
+            this.btnConfig.Size = new System.Drawing.Size(140, 47);
             this.btnConfig.TabIndex = 1;
             this.btnConfig.Text = "Configurar";
             this.btnConfig.UseVisualStyleBackColor = false;
@@ -139,30 +141,42 @@
             this.lblTotalValue.Text = "Valor total: R$ 0,00";
             this.lblTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dtgDataView
+            // dtgParkingView
             // 
-            this.dtgDataView.AllowUserToAddRows = false;
-            this.dtgDataView.AllowUserToDeleteRows = false;
-            this.dtgDataView.AllowUserToResizeColumns = false;
-            this.dtgDataView.AllowUserToResizeRows = false;
-            this.dtgDataView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtgParkingView.AllowUserToAddRows = false;
+            this.dtgParkingView.AllowUserToDeleteRows = false;
+            this.dtgParkingView.AllowUserToResizeColumns = false;
+            this.dtgParkingView.AllowUserToResizeRows = false;
+            this.dtgParkingView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDataView.Location = new System.Drawing.Point(3, 3);
-            this.dtgDataView.Name = "dtgDataView";
-            this.dtgDataView.ReadOnly = true;
-            this.dtgDataView.RowHeadersWidth = 51;
-            this.dtgDataView.RowTemplate.Height = 24;
-            this.dtgDataView.Size = new System.Drawing.Size(976, 532);
-            this.dtgDataView.TabIndex = 1;
+            this.dtgParkingView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dtgParkingView.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgParkingView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgParkingView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgParkingView.GridColor = System.Drawing.SystemColors.Desktop;
+            this.dtgParkingView.Location = new System.Drawing.Point(3, 3);
+            this.dtgParkingView.Name = "dtgParkingView";
+            this.dtgParkingView.ReadOnly = true;
+            this.dtgParkingView.RowHeadersVisible = false;
+            this.dtgParkingView.RowHeadersWidth = 51;
+            this.dtgParkingView.RowTemplate.Height = 24;
+            this.dtgParkingView.Size = new System.Drawing.Size(976, 532);
+            this.dtgParkingView.TabIndex = 1;
             // 
             // lblHourValue
             // 
             this.lblHourValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHourValue.AutoSize = true;
-            this.lblHourValue.Location = new System.Drawing.Point(3, 476);
+            this.lblHourValue.Location = new System.Drawing.Point(3, 472);
             this.lblHourValue.Name = "lblHourValue";
             this.lblHourValue.Size = new System.Drawing.Size(140, 46);
             this.lblHourValue.TabIndex = 2;
@@ -187,7 +201,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgParkingView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +211,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblTotalValue;
-        private System.Windows.Forms.DataGridView dtgDataView;
+        private System.Windows.Forms.DataGridView dtgParkingView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnInsertRegister;
         private System.Windows.Forms.Button btnConfig;
