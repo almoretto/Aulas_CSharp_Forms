@@ -202,8 +202,18 @@ namespace PaintAppSimple
         }
 
 
+
         #endregion
 
-       
+        private void pnlDrawPad_Resize(object sender, EventArgs e)
+        {
+            graphicsDrawPanel = pnlDrawPad.CreateGraphics();
+            var tempImage = new Bitmap(pnlDrawPad.Width, pnlDrawPad.Height);
+            var tempImgGraph = Graphics.FromImage(tempImage);
+            tempImgGraph.Clear(pnlDrawPad.BackColor);
+            tempImgGraph.DrawImage(imageToSave, 0, 0);
+            imageToSave = tempImage;
+            imageGraphicsToSave = tempImgGraph; 
+        }
     }
 }

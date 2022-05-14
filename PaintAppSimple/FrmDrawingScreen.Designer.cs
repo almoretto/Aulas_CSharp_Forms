@@ -44,9 +44,9 @@ namespace PaintAppSimple
             // 
             // grpControls
             // 
-            this.grpControls.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpControls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpControls.AutoSize = true;
             this.grpControls.Controls.Add(this.btnSave);
             this.grpControls.Controls.Add(this.btnClean);
             this.grpControls.Controls.Add(this.btnEraser);
@@ -57,7 +57,7 @@ namespace PaintAppSimple
             this.grpControls.ForeColor = System.Drawing.Color.White;
             this.grpControls.Location = new System.Drawing.Point(12, 24);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(1240, 110);
+            this.grpControls.Size = new System.Drawing.Size(1240, 112);
             this.grpControls.TabIndex = 0;
             this.grpControls.TabStop = false;
             this.grpControls.Text = "Controles";
@@ -141,7 +141,10 @@ namespace PaintAppSimple
             // 
             // pnlDrawPad
             // 
-            this.pnlDrawPad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDrawPad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDrawPad.AutoSize = true;
             this.pnlDrawPad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlDrawPad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlDrawPad.Location = new System.Drawing.Point(34, 156);
@@ -152,6 +155,7 @@ namespace PaintAppSimple
             this.pnlDrawPad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseDown);
             this.pnlDrawPad.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseMove);
             this.pnlDrawPad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlDrawPad_MouseUp);
+            this.pnlDrawPad.Resize += new System.EventHandler(this.pnlDrawPad_Resize);
             // 
             // FrmDrawingScreen
             // 
@@ -170,6 +174,7 @@ namespace PaintAppSimple
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
