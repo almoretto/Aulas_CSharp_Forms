@@ -129,6 +129,7 @@
             this.btnConfig.TabIndex = 1;
             this.btnConfig.Text = "Configurar";
             this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // lblTotalValue
             // 
@@ -170,6 +171,7 @@
             this.dtgParkingView.RowTemplate.Height = 24;
             this.dtgParkingView.Size = new System.Drawing.Size(976, 532);
             this.dtgParkingView.TabIndex = 1;
+            this.dtgParkingView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgParkingView_CellDoubleClick);
             // 
             // lblHourValue
             // 
