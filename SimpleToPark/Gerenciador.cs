@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleToPark
 {
     // internal
-    internal class Gerenciador
+    public class Gerenciador
     {
         public float ValorHora { get; set; } // Para configuramos o valor da hora dinâmicamente
         private float _arrecadado; // Para armazenar o total arrecadado

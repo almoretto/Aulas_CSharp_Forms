@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using static SimpleToPark.Gerenciador;
 
 namespace SimpleToPark
 {
@@ -10,6 +9,7 @@ namespace SimpleToPark
     {
         private DataTable SPSysDataBase; //Virtual Data Table for Database.
         private Gerenciador gerenciador;
+
         public FormSimpleToPark()
         {
             InitializeComponent();
@@ -73,7 +73,10 @@ namespace SimpleToPark
                     lblTotalValue.Text = $"Total Arrecadado: R$ {gerenciador.Arrecadado.ToString("0.00")}";
                 }
             }
+
         }
+
+       
     }
 }
 
